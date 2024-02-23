@@ -111,5 +111,11 @@ align-items: center;
 .list .taskItemContainer:hover .deleteButton {
     display: inline-block;
 }
-
+@media(max-width:768px){
+    .mainContainer{
+        width: 300px;
+        align-content: center;
+        justify-content: center;
+    }
+}
 
