@@ -3,34 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800&family=Inter:wght@100..900&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Todo App</title>
   </head>
 
   <body>
     <div class="mainContainer">
-      <header>
+      <header id="header">
         <h1>To-Do List</h1>
       </header>
-      
+
       <section class="add">
-        <input id="taskInput" type="text" placeholder="Add your new todo" />
-        <i id="addTask" class="fas fa-plus">Add</i>
+        <input id="taskInput" type="text" placeholder="Add a new todo" />
+        <h2 id="addTask" class="fas fa-plus">add todo</h2>
       </section>
-      
-      
+
       <section class="list">
-        <div class="taskItemContainer"></div>
-        <div id="taskList"></div>
+        <div class="taskItemContainer">
+          <div id="taskList"></div>
+        </div>
       </section>
-      
+
       <section class="clear">
         <p id="taskCount">You have 0 pending tasks</p>
-        
+
         <button id="clearBtn">Clear All</button>
       </section>
 
       <script src="app.js"></script>
     </div>
-    
   </body>
+</html>

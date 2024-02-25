@@ -1,181 +1,195 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    width: 100%;
-    background-image: linear-gradient(rgb(138, 196, 219) rgb(50, 153, 236));
-    background-color: #9c89b8;
-    margin: 90px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  background-image: linear-gradient(rgb(138, 196, 219) rgb(50, 153, 236));
+  background-color: #9c89b8;
+  margin: 90px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", Verdana, Tahoma, sans-serif;
 }
 
 .mainContainer {
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-    background-color: rgb(241, 236, 236);
-    max-height: 100vh;
-    width: 600px;
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 5px;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  background-color: rgb(241, 236, 236);
+  max-height: 100vh;
+  width: 600px;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 5px;
 }
 
-header{
-    padding: 6px;
-    
-}
-#taskList{
-    margin-top: 20px;
-    padding-bottom: 30px;
-    gap: 3rem;
-    
-    
+
+.mainContainer .taskItemContainer {
+  display: flex;
+  align-items: right;
+  margin-bottom: 10px;
+  width: 90%;
+  color: rgb(55, 30, 30);
+  background-color: white;
+  border: none;
+  padding: 59px 50px;
+  cursor: pointer;
+  margin-left: 30px;
+  border-radius: 5px;
+  
+
 }
 
-.taskItemContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+.taskItemContainer input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
 }
 
-.taskItemContainer input[type="text"]{
-    flex: 1;
-    margin-right: 10px;
-}
 
-#addTask{
-   background-color: #5260a7; 
-   color: rgb(248, 241, 241);
-    text-align: center; 
-    padding-top:5px;
-    font-weight: 4 00;
-    font-size: 15;
-     cursor: pointer;
+.mainContainer #taskList{
+background-color: #4b0e0e;
+color: aliceblue;
+}
+#addTask {
+  background-color: rgb(45, 104, 45);
+  color: rgb(248, 241, 241);
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 4 00;
+  font-size: 15;
+  cursor: pointer;
 }
 
 .mainContainer header {
-    display: flex;
-    font-size: 18px;
-    margin-bottom: 10px;
+  display: flex;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 6px;
+  text-align: center;
+  justify-content: center;
 }
 
 .mainContainer .add {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
 }
-
-
 
 .mainContainer .add #taskInput {
-    width: 90%;
-    height: 30px;
-    font-size: 17px;
-    padding: 10px;
-    padding: auto;
-     
+  width: 70%;
+  height: 60%;
+  font-size: 17px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px 0 0 10px;
 }
 
-
-
-::placeholder{
-    color: #f0e6ef;
+::placeholder {
+  color: #848aaa;
 }
 
 .mainContainer .add #addTask {
-    width: 10%;
-    height: 30px;
+  width: 20%;
+  height: 39px;
+  border: none;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 200;
+  border-radius: 0 10px 10px 0;
 }
 
-.mainContainer .list{
-display: flex;
-
-
-
-}
-.list {
-    overflow-y: auto; 
-    max-height: 100%; 
-    flex-grow: 1; 
-    width: 100%;
-    padding-top: 20px;
-     }
-
-#addTask{
-    border-radius: 6px;
-    margin-left: 5px;
-}
-
-#clearBtn{
-    border-radius: 12px;
+.mainContainer .list {
+  display: flex;
+  overflow-y: auto;
+  max-height: 100%;
+  flex-grow: 1;
+  width: 100%;
+  padding-top: 10px;
+  gap: 3rem;
 }
 
 
-.mainContainer .clear{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1em;
-    color: rgb(10, 10, 10);
+#clearBtn {
+  border-radius: 12px;
 }
 
-.mainContainer .clear button{
-    display: inline-block;
-    color: rgb(248, 241, 241);
-    background-color: red;
-    border: none;
-    max-width: 100%;
-    padding: 10px 27px;
-   
+.mainContainer .clear {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1em;
+  color: rgb(10, 10, 10);
 }
 
-#taskInput{
-    border-radius: 6px;
-}
-.clear{
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+.mainContainer .clear button {
+  display: inline-block;
+  color: rgb(248, 241, 241);
+  background-color: red;
+  border: none;
+  max-width: 100%;
+  padding: 10px 27px;
 }
 
-
-.deleteButton{
-    color: white;
-    background-color: #ca0505;
-   border: none;
-   padding: 4px 8px;
-   cursor: pointer;
-   margin-left: 10px;
-   border-radius: 5px;
-   transition: background-color 0.3 ease;
-
+.clear {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.taskItem span{
-    border-bottom: 1px dashed #ccc;
-    cursor: pointer;
-    padding-bottom: 2px;
-    margin-bottom: 5px;
+
+.deleteButton {
+  color: white;
+  background-color: #ca0505;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3 ease;
+}
+.taskItem span {
+  border-bottom: 1px dashed #ccc;
+  cursor: pointer;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
 }
 .list .taskItemContainer:hover .deleteButton {
-    display: inline-block;
-    background-color: #f0f0f0;
-}
-@media(max-width:768px){
-    .mainContainer{
-        width: 300px;
-        align-content: center;
-        justify-content: center;
-    }
+  display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 90%;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .mainContainer .add #taskInput{
+    width: 70%;
+  }
+
+  .mainContainer .add #addTask { 
+    width: 30%;
+
+  }
+  .mainContainer  .taskItemContainer {
+    display: flex;
+  align-items: right;
+  margin-bottom: 10px;
+  width: 100%;
+  color: rgb(55, 30, 30);
+  background-color: white;
+  border: none;
+  padding: 40px 50px;
+  cursor: pointer;
+  margin-left: 5px;
+  border-radius: 5px;
+  
+
+  }
+}
