@@ -41,8 +41,9 @@ document.getElementById("addTask").addEventListener("click", function() {
     deleteButton.classList.add("deleteButton");
     deleteButton.addEventListener("click", function() {
       taskItem.remove();
-      updateTaskCount();
+      tasks = tasks.filter(task => task !== taskText); 
       saveTasksToLocalStorage(); 
+      updateTaskCount(); 
 
     });
     
@@ -53,7 +54,7 @@ document.getElementById("addTask").addEventListener("click", function() {
     taskInput.value = "";
     updateTaskCount();
     tasks.push(taskText); 
-    saveTasksToLocalStorage(); 
+     saveTasksToLocalStorage(); 
   }
 });
   
@@ -73,29 +74,3 @@ function updateTaskCount() {
   taskCount.textContent = `You have ${tasks} pending task${tasks !== 1 ? "s" : ""}`;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  tasks.forEach(function (taskText) {
-    const taskList = document.getElementById('taskList');
-    const taskItem = document.createElement('div');
-    taskItem.classList.add('taskItem');
-
-    const taskContent = document.createElement('span');
-    taskContent.textContent = taskText;
-    taskContent.setAttribute('contenteditable', 'true');
-
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.classList.add('deleteButton');
-    deleteButton.addEventListener('click', function () {
-      taskItem.remove();
-      updateTaskCount();
-      saveTasksToLocalStorage();
-    });
-
-    taskItem.appendChild(taskContent);
-    taskItem.appendChild(deleteButton);
-    taskList.appendChild(taskItem);
-  });
-
-  updateTaskCount();
-});
