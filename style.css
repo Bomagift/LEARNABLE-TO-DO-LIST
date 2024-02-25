@@ -29,20 +29,32 @@ body {
 
 
 .mainContainer .taskItemContainer {
-  display: flex;
-  align-items: right;
-  margin-bottom: 10px;
-  width: 90%;
-  color: rgb(55, 30, 30);
-  background-color: white;
-  border: none;
-  padding: 59px 50px;
-  cursor: pointer;
-  margin-left: 30px;
-  border-radius: 5px;
+    margin-bottom: 10px;
+    width: 90%; 
+    margin-left: 30px;
+  }
   
-
-}
+  .taskItem {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px; 
+    background-color: white;
+    color: rgb(90, 28, 28);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+     margin-bottom: 10px;
+  }
+  
+  .taskItem span {
+    border-bottom: 1px dashed #ccc;
+    cursor: pointer;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    flex: 1;
+  }
+  
 
 .taskItemContainer input[type="text"] {
   flex: 1;
@@ -50,12 +62,9 @@ body {
 }
 
 
-.mainContainer #taskList{
-background-color: #4b0e0e;
-color: aliceblue;
-}
+
 #addTask {
-  background-color: rgb(45, 104, 45);
+  background-color:#231651;
   color: rgb(248, 241, 241);
   text-align: center;
   padding-top: 5px;
@@ -109,7 +118,7 @@ color: aliceblue;
   max-height: 100%;
   flex-grow: 1;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 2px;
   gap: 3rem;
 }
 
@@ -177,19 +186,38 @@ color: aliceblue;
     width: 30%;
 
   }
-  .mainContainer  .taskItemContainer {
-    display: flex;
-  align-items: right;
-  margin-bottom: 10px;
-  width: 100%;
-  color: rgb(55, 30, 30);
-  background-color: white;
-  border: none;
-  padding: 40px 50px;
-  cursor: pointer;
-  margin-left: 5px;
-  border-radius: 5px;
   
 
+  .mainContainer .taskItemContainer {
+    margin-bottom: 10px;
+    width: 100%; 
+    margin-left: 5px;
+    
   }
+  
+  .taskItem {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px; 
+    background-color: white;
+    color: rgb(90, 28, 28);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+     margin-bottom: 10px;
+  }
+  
+  .taskItem span {
+    border-bottom: 1px dashed #ccc;
+    cursor: pointer;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    flex: 1;
+  }
+  
+
+
+
+
 }

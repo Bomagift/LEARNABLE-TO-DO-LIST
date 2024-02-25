@@ -20,7 +20,6 @@ document.getElementById("addTask").addEventListener("click", function() {
   const taskText = taskInput.value.trim();
 
 
-  
   if (taskText !== "") {
     const taskList = document.getElementById("taskList");
     const taskItem = document.createElement("div");
@@ -43,6 +42,8 @@ document.getElementById("addTask").addEventListener("click", function() {
     deleteButton.addEventListener("click", function() {
       taskItem.remove();
       updateTaskCount();
+      saveTasksToLocalStorage(); 
+
     });
     
     taskItem.appendChild(taskContent);
@@ -51,12 +52,18 @@ document.getElementById("addTask").addEventListener("click", function() {
     
     taskInput.value = "";
     updateTaskCount();
+    tasks.push(taskText); 
+    saveTasksToLocalStorage(); 
   }
 });
+  
 
 document.getElementById("clearBtn").addEventListener("click", function() {
   const taskList = document.getElementById("taskList");
   taskList.innerHTML = ""; 
+  tasks = []; // Clear all tasks from the tasks array
+  
+  saveTasksToLocalStorage.removeItem('tasks');
   updateTaskCount();
 });
 
@@ -65,3 +72,30 @@ function updateTaskCount() {
   const tasks = document.querySelectorAll(".taskItem").length;
   taskCount.textContent = `You have ${tasks} pending task${tasks !== 1 ? "s" : ""}`;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  tasks.forEach(function (taskText) {
+    const taskList = document.getElementById('taskList');
+    const taskItem = document.createElement('div');
+    taskItem.classList.add('taskItem');
+
+    const taskContent = document.createElement('span');
+    taskContent.textContent = taskText;
+    taskContent.setAttribute('contenteditable', 'true');
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('deleteButton');
+    deleteButton.addEventListener('click', function () {
+      taskItem.remove();
+      updateTaskCount();
+      saveTasksToLocalStorage();
+    });
+
+    taskItem.appendChild(taskContent);
+    taskItem.appendChild(deleteButton);
+    taskList.appendChild(taskItem);
+  });
+
+  updateTaskCount();
+});
